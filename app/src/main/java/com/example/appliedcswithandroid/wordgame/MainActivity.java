@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     CountDownTimer countDownTimer;
 
     AdapterView<?> p = null;
-    ArrayList<View> views;
+    ArrayList<View> views;     // For storing buttons views which are disable, so that they can be re-enable
 
     String s;
     char[] startingLetters = new char[16];
@@ -100,20 +100,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        // Log.d(TAG, "Dictionary Formed");
-/*
-        String s = getWord(4,root) + getWord(4,root) + getWord(5,root) + getWord(3,root);
 
-        char[] startingLetters = new char[16];
-        startingLetters = s.toUpperCase().toCharArray();
-
-        list = new ArrayList<Character>();
-        for(int i=0;i<16;i++)
-            list.add(startingLetters[i]);
-
-        Collections.shuffle(list);
-        gridView.setAdapter(new MyAdapter(this, list));
-*/
         reset_grid();
 
         start_timer();
